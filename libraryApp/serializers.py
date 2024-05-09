@@ -4,9 +4,16 @@ from libraryApp.models import Author, Book
 class AuthorSerializer(serializers.ModelSerializer):
     class Meta:
         model = Author
-        fields = '__all__'
+        fields = ['id', 'name']
 
 class BookSerializer(serializers.ModelSerializer):
+    authors = serializers.PrimaryKeyRelatedField(many=True, queryset=Author.objects.all())
     class Meta:
         model = Book
-        fields = '__all__'
+        fields = [
+            'id',
+            'name',
+            'edition',
+            'publication_year',
+            'authors',
+        ]
