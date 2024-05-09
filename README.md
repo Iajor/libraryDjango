@@ -72,10 +72,6 @@ Para executar os testes automatizados, execute o seguinte comando:
 python manage.py test
 ```
 
-## Documentação da API
-
-Para documentação detalhada sobre como usar os endpoints da API, consulte a [documentação da API](documentacao-api.md).
-
 ## Contribuidores
 
 - André Rojai (@rojaiandre)
